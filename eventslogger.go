@@ -5,10 +5,14 @@ import (
 	"github.com/xdevices/eventslogger/config"
 	"github.com/xdevices/eventslogger/dbprovider"
 	"github.com/xdevices/eventslogger/handlers"
+	"github.com/xdevices/eventslogger/observers"
 	"github.com/xdevices/eventslogger/service"
 )
 
 func main() {
+
+	go observers.LogsObserver()
+
 	e := echo.New()
 	e.GET("/events/", handlers.FindEventsHandler)
 	e.Logger.Fatal(e.Start(config.EventsloggerConfigManager().Address()))
