@@ -4,16 +4,17 @@ import (
 	"fmt"
 	"log"
 
+	"github.com/xdevices/eventslogger/config"
+
 	"github.com/jinzhu/gorm"
 	"github.com/xdevices/eventslogger/model"
-	"github.com/xdevices/register/config"
 	"github.com/xdevices/utilities/db"
 
 	_ "github.com/jinzhu/gorm/dialects/sqlite"
 )
 
 func InitDbManager() {
-	dbPath := config.Config().DBPath()
+	dbPath := config.EventsloggerConfigManager().DBPath()
 
 	if path, exists := db.AdjustDBPath(dbPath); !exists {
 		dbPath = path
