@@ -11,9 +11,13 @@ type DBManager interface {
 
 	// mapper
 	MapToEvent(dto dto.EventDTO) *model.Event
+	MapToDto(input *model.Event) dto.EventDTO
 
 	// CRUDs
 	SaveEvent(dto dto.EventDTO) (*model.Event, error)
+
+	// search function
+	FindBy(dto dto.SearchDTO) ([]model.Event, error)
 }
 
 var Mgr DBManager
