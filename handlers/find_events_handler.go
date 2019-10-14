@@ -4,8 +4,10 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/google/uuid"
+	"github.com/xdevices/eventslogger/publishers"
+
 	"github.com/labstack/echo"
-	"github.com/labstack/gommon/log"
 	"github.com/xdevices/eventslogger/dto"
 	"github.com/xdevices/eventslogger/service"
 	"github.com/xdevices/utilities/stringutils"
@@ -47,8 +49,7 @@ func FindEventsHandler(c echo.Context) error {
 	publishedOnFrom := c.QueryParam("publishedOnFrom")
 	if !stringutils.IsZero(publishedOnFrom) {
 		if parse, err := time.Parse(time.RFC3339, publishedOnFrom); err != nil {
-			// TODO: publish warning regarding problems with parsing date value
-			log.Warn("could not parse [publishedOnFrom]")
+			publishers.Logger().Warn(uuid.New().String(), "", "could not parse [publishedOnFrom]")
 		} else {
 			searchDto.PublishedOnFrom = &parse
 		}
@@ -57,8 +58,7 @@ func FindEventsHandler(c echo.Context) error {
 	publishedOnTo := c.QueryParam("publishedOnTo")
 	if !stringutils.IsZero(publishedOnTo) {
 		if parse, err := time.Parse(time.RFC3339, publishedOnTo); err != nil {
-			// TODO: publish warning regarding problems with parsing date value
-			log.Warn("could not parse [publishedOnTo]")
+			publishers.Logger().Warn(uuid.New().String(), "", "could not parse [publishedOnTo]")
 		} else {
 			searchDto.PublishedOnTo = &parse
 		}

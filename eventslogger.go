@@ -6,6 +6,7 @@ import (
 	"github.com/xdevices/eventslogger/dbprovider"
 	"github.com/xdevices/eventslogger/handlers"
 	"github.com/xdevices/eventslogger/observers"
+	"github.com/xdevices/eventslogger/publishers"
 	"github.com/xdevices/eventslogger/service"
 )
 
@@ -24,4 +25,5 @@ func init() {
 	manager.ScheduleHeartBeat(config.EventsloggerConfigManager().ServiceName(), 10)
 	dbprovider.InitDbManager()
 	service.Init()
+	publishers.InitLogger()
 }
