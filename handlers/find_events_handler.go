@@ -47,6 +47,7 @@ func FindEventsHandler(c echo.Context) error {
 	publishedOnFrom := c.QueryParam("publishedOnFrom")
 	if !stringutils.IsZero(publishedOnFrom) {
 		if parse, err := time.Parse(time.RFC3339, publishedOnFrom); err != nil {
+			// TODO: publish warning regarding problems with parsing date value
 			log.Warn("could not parse [publishedOnFrom]")
 		} else {
 			searchDto.PublishedOnFrom = &parse
@@ -56,6 +57,7 @@ func FindEventsHandler(c echo.Context) error {
 	publishedOnTo := c.QueryParam("publishedOnTo")
 	if !stringutils.IsZero(publishedOnTo) {
 		if parse, err := time.Parse(time.RFC3339, publishedOnTo); err != nil {
+			// TODO: publish warning regarding problems with parsing date value
 			log.Warn("could not parse [publishedOnTo]")
 		} else {
 			searchDto.PublishedOnTo = &parse
