@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/xdevices/eventslogger/dbprovider"
-	"github.com/xdevices/eventslogger/dto"
+	"github.com/maxzurawski/eventslogger/dbprovider"
+	"github.com/maxzurawski/eventslogger/dto"
 )
 
 func (s *service) SaveEvent(dto dto.EventDTO) (*dto.EventDTO, error) {
