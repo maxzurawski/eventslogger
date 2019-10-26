@@ -5,12 +5,12 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/xdevices/eventslogger/publishers"
+	"github.com/maxzurawski/eventslogger/publishers"
 
 	"github.com/labstack/echo"
-	"github.com/xdevices/eventslogger/dto"
-	"github.com/xdevices/eventslogger/service"
-	"github.com/xdevices/utilities/stringutils"
+	"github.com/maxzurawski/eventslogger/dto"
+	"github.com/maxzurawski/eventslogger/service"
+	"github.com/maxzurawski/utilities/stringutils"
 )
 
 func FindEventsHandler(c echo.Context) error {

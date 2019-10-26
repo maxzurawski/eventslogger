@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/xdevices/eventslogger/config"
+	"github.com/maxzurawski/eventslogger/config"
 
 	"github.com/jinzhu/gorm"
-	"github.com/xdevices/eventslogger/model"
-	"github.com/xdevices/utilities/db"
+	"github.com/maxzurawski/eventslogger/model"
+	"github.com/maxzurawski/utilities/db"
 
 	_ "github.com/jinzhu/gorm/dialects/sqlite"
 )
