@@ -1,8 +1,8 @@
 package dbprovider
 
 import (
-	"github.com/maxzurawski/eventslogger/dto"
-	"github.com/maxzurawski/eventslogger/model"
+	"github.com/xdevices/eventslogger/dto"
+	"github.com/xdevices/eventslogger/model"
 )
 
 func (mgr *manager) MapToEvent(dto dto.EventDTO) *model.Event {

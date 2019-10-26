@@ -1,6 +1,6 @@
 package service
 
-import "github.com/maxzurawski/eventslogger/dbprovider"
+import "github.com/xdevices/eventslogger/dbprovider"
 
 func Init() {
 	s := service{}

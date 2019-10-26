@@ -3,10 +3,10 @@ package observers
 import (
 	"encoding/json"
 
-	"github.com/maxzurawski/eventslogger/config"
-	"github.com/maxzurawski/eventslogger/dto"
-	"github.com/maxzurawski/eventslogger/service"
-	"github.com/maxzurawski/utilities/rabbit/crosscutting"
+	"github.com/xdevices/eventslogger/config"
+	"github.com/xdevices/eventslogger/dto"
+	"github.com/xdevices/eventslogger/service"
+	"github.com/xdevices/utilities/rabbit/crosscutting"
 )
 
 func LogsObserver() {

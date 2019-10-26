@@ -1,6 +1,6 @@
 package service
 
-import "github.com/maxzurawski/eventslogger/dto"
+import "github.com/xdevices/eventslogger/dto"
 
 func (s *service) FindBy(dto dto.SearchDTO) (result []dto.EventDTO, err error) {
 	events, err := s.mgr.FindBy(dto)

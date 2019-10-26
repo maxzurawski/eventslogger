@@ -2,12 +2,12 @@ package main
 
 import (
 	"github.com/labstack/echo"
-	"github.com/maxzurawski/eventslogger/config"
-	"github.com/maxzurawski/eventslogger/dbprovider"
-	"github.com/maxzurawski/eventslogger/handlers"
-	"github.com/maxzurawski/eventslogger/observers"
-	"github.com/maxzurawski/eventslogger/publishers"
-	"github.com/maxzurawski/eventslogger/service"
+	"github.com/xdevices/eventslogger/config"
+	"github.com/xdevices/eventslogger/dbprovider"
+	"github.com/xdevices/eventslogger/handlers"
+	"github.com/xdevices/eventslogger/observers"
+	"github.com/xdevices/eventslogger/publishers"
+	"github.com/xdevices/eventslogger/service"
 )
 
 func main() {

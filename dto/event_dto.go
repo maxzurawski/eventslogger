@@ -3,7 +3,7 @@ package dto
 import (
 	"time"
 
-	"github.com/maxzurawski/utilities/stringutils"
+	"github.com/xdevices/utilities/stringutils"
 )
 
 type EventDTO struct {

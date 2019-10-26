@@ -2,8 +2,8 @@ package dbprovider
 
 import (
 	"github.com/jinzhu/gorm"
-	"github.com/maxzurawski/eventslogger/dto"
-	"github.com/maxzurawski/eventslogger/model"
+	"github.com/xdevices/eventslogger/dto"
+	"github.com/xdevices/eventslogger/model"
 )
 
 type DBManager interface {
